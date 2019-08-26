@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #F4F6FA;
+}
+.cb {
+    clear: both;
+}
+.container{
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    margin:  50px auto;
+    display: none;
+    opacity: 0;
+    overflow: hidden;
+    max-width: 960px;
+    transition: opacity 0.5s;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+  /* players' names form */
+  .form{
+  }
+  #names{
+      width: 80%;
+      margin: 100px auto;
+      padding: 20px;
+  }
+  #names input{
+      width: 100%;
+      margin: 0 auto;
+      display: block;
+      height: 102px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      border: none;
+      padding: 0 15px;
+      color: #D3D3D3;
+      font-size: 36px;
+      margin: 20px 0;
+  }
+  #names button{
+      float: right;
+      height: 50px;
+      padding: 0 40px;
+      border-radius: 10px;
+      font-size: 20px;
+  }
+.beginButton{
+    display: none;
+}
+
+
+/* game board */
+.game{
+    margin: auto;
+    padding: 30px;
+    color: #7F8185;
+    display: none;
+}
+.turnActions{
+    display: none;
+}
+.player ul li{
+    list-style: none;
+    text-align: center;
+    font-size: 12px;
+    padding: 2px 10px;
+}
+.player1{
+    float: left;
+    margin-top: 20px;
+}
+.player2{
+    float: right;
+    margin-top: 20px;
+}
+.player ul{
+    background: #F4F6FA;
+    border-radius: 20px;
+    padding: 10px 0;
+}
+.playerHeading{
+    padding-bottom:10px !important;
+    margin-bottom: 8px;
+    font-weight: bold;
+    border-bottom: 3px solid #fff;
+    color: #444;
+}
+.turn ul li{
+    display: inline-block;
+    background: #F4F6FA;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    line-height: 100px;
+    margin: 20px;
+    cursor: pointer;
+}
+.turn ul li svg{
+    width: 50px;
+    height: 50px;
+}
+
+.board{
+    max-width: 100%;
+    margin: 0 auto;
+}
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 20px;
+}
+table tr:first-child td:first-child {
+    border-top-left-radius: 20px;
+}
+table tr:first-child td:last-child {
+    border-top-right-radius: 20px;
+}
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 20px;
+}
+.boardTable{
+    table-layout: fixed;
+}
+.boardTable td{
+    background: #F4F6FA;
+    border: 3px solid #fff;
+    padding-bottom: 10.8%;
+}
+.pausePlay{
+    position: absolute;
+    display: none;
+    right: 45px;
+    bottom: 20px;
+    z-index: 99999;
+    cursor: pointer;
+    color: #7F8185;
+}
+    /* squares */
+    .block{
+        background: repeating-linear-gradient(45deg, #333333 0, #333333 5%, #4f4f4f 0, #4f4f4f 50%) 0 / 10px 10px !important;
+    } 
+    .dagger{
+        background: url('img/dagger.png') center center no-repeat !important;
+        background-size:contain !important;
+      }
+    .stick{
+        background: url('img/stick.png') center center no-repeat !important;
+        background-size:contain !important;
+      }
+
+    .sword{
+        background: url('img/sword.png') center center no-repeat !important;
+        background-size:contain !important;
+      }
+    .whip{
+        background: url('img/whip.png') center center no-repeat !important;
+        background-size:contain !important;
+      }
+    .available{
+        -moz-box-shadow:    inset 0 0 10px #aaa;
+        -webkit-box-shadow: inset 0 0 10px #aaa;
+        box-shadow:         inset 0 0 10px #aaa;
+    }
+    .p1{
+        background: url('img/player1.png') center center no-repeat !important;
+        background-color:lightblue !important;
+        background-size:contain !important;
+      }
+    .p2{
+        background: url('img/player2.png') center center no-repeat !important;
+        background-color: lightsalmon !important;
+        background-size:contain !important;
+      }
+
+    .passed {
+        background: darkorchid !important;
+    }
+
+
+    meter {
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      meter::-webkit-meter-optimum-value {
+        -webkit-transition: width .5s;
+      }
+      
+      meter::-webkit-meter-optimum-value:hover {
+        /* Reset each sub-category to 20% */
+        background-image: linear-gradient(
+          90deg, 
+          #8bcf69 20%, 
+          #e6d450 20%,
+          #e6d450 40%,
+          #f28f68 40%,
+          #f28f68 60%,
+          #cf82bf 60%,
+          #cf82bf 80%,
+          #719fd1 80%,
+          #719fd1 100%
+        );
+        transition: width .5s;
+        width: 100% !important; /* !important required. to override the inline styles in WebKit. */
+      }
+@media only screen and (max-width: 600px) {
+                    .player{
+                        width: 100%;
+                    }
+
+      }
+
+
+@media only screen and (max-width: 900px){
+    .turn{
+        clear: both;
+    }
+}
